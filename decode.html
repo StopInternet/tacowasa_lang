@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title> たこわさ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="shortcut icon" href="../image/icon.ico">
+    <script type="text/javascript">
+     window.onload = function onLoad() {
+         target = document.getElementById("output");
+         target.innerHTML = out;
+     }
+ </script>
+  </head>
+  <header>
+    <nav id="global">
+     </nav>
+  </header>
+    <body>
+      <h1> たこわさ語変換サイト</h1>
+       <br>
+       「たこわさ語変換」は、入力した文字を<br>
+       「たこ」か「わさ」の2単語に変換します。<br>
+       <div>
+        たこわさ語解読：<br>
+       <textarea id="tacowasa_lang" onchange="decode(this.value);" onkeydown="decode(this.value);" ></textarea>
+      </div>
+      <button onclick="copyToClipBoard()">Copy</button>
+
+       <div>
+        変換結果：<br>
+       <textarea id="untacowasa_lang" size="30"></textarea>
+       </div>
+      <script type="text/javascript" src="javascript/morse_encode.js"></script>
+      <script type="text/javascript" src="javascript/morse_decode.js"></script>
+     </body>
+</html>
